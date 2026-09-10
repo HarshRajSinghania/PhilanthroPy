@@ -6,6 +6,9 @@ Format: [Keep a Changelog](https://keepachangelog.com/en/1.1.0/)
 ## [Unreleased]
 
 ### Added
+- Tests for `MovesManagementClassifier` now fit a named DataFrame and an
+  array so `feature_names_in_` is both recorded and absent on the paths
+  sklearn specifies. Closes #200.
 - `EncounterRecencyTransformer` gains an `as_of` parameter, the last dated
   transformer without one. Encounters dated after it are blanked to `NaT`
   before the features are computed, so a clinical encounter that had not
